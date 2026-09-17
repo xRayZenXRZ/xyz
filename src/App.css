@@ -182,3 +182,9 @@
     border-right-color: var(--border);
   }
 }
+
+.tweet-image{
+  max-height: 75%;
+  width: auto;
+  border-radius: 5%;
+}
