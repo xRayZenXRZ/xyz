@@ -2,95 +2,81 @@ import type { Tweet } from "../types/Tweet";
 
 export const tweets: Tweet[] = [
   {
-    id: "1",
-    authorName: "Dev France",
-    authorHandle: "dev_fr",
-    content:
-      "Bienvenue sur notre nouveau fil d'actualités dédié au développement web !",
-    createdAt: "2026-09-14T08:00:00.000Z",
-  },
-  {
-    id: "2",
-    authorName: "Sarah Connor",
-    authorHandle: "s_connor",
-    content:
-      "Aujourd'hui, j'ai enfin réussi à configurer mon environnement React avec TypeScript sans aucune erreur de build. C'est une petite victoire mais ça fait tellement plaisir après trois heures de recherche intensive !",
+    id: crypto.randomUUID(),
+    authorName: "Ada Lovelace",
+    authorHandle: "ada_lovelace",
+    content: "Je viens de terminer le premier algorithme destiné à être exécuté par une machine. La machine analytique a un potentiel incroyable ! #programmation #histoire",
     image: {
-      url: "https://picsum.photos/id/1/600/400",
-      alt: "Un bureau avec un ordinateur affichant du code",
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/500px-Ada_Lovelace_portrait.jpg",
+      alt: "Portrait d'Ada Lovelace"
     },
-    createdAt: "2026-09-14T08:30:00.000Z",
+    createdAt: new Date("1982-10-10T10:00:00Z")
   },
   {
-    id: "3",
-    authorName: "Tech News",
-    authorHandle: "technews_official",
-    content:
-      "Voici le tweet long requis pour les tests : La nouvelle version de TypeScript vient de sortir et elle apporte des améliorations majeures sur l'inférence de types, la vitesse de compilation ainsi que sur la gestion des modules ES. Les développeurs React et Vue vont particulièrement apprécier les nouvelles fonctionnalités d'auto-complétion avancée dans VS Code !", // 326 caractères
-    createdAt: "2026-09-14T09:15:00.000Z",
-  },
-  {
-    id: "4",
-    authorName: "Lucas Martin",
-    authorHandle: "luke_sky",
-    content:
-      "Pause café avant d'attaquer la deuxième partie du TD sur l'affichage des tweets.",
+    id: crypto.randomUUID(),
+    authorName: "Grace Hopper",
+    authorHandle: "grace_hopper",
+    content: "Nous avons trouvé un vrai 'bug' dans le système aujourd'hui. Une phalène s'était coincée dans le relais 70 du panneau F. Nous avons dû débugger la machine ! 🐛",
     image: {
-      url: "https://picsum.photos/id/1060/600/400",
-      alt: "Une tasse de café fumante",
+      url: "https://upload.wikimedia.org/wikipedia/commons/5/55/Grace_Hopper.jpg",
+      alt: "Portrait de Grace Hopper"
     },
-    createdAt: "2026-09-14T09:45:00.000Z",
+    createdAt: new Date("1986-09-09T15:45:00Z")
   },
   {
-    id: "5",
-    authorName: "Code Academy",
-    authorHandle: "code_acad",
-    content:
-      "Rappel : la propreté du code est aussi importante que son fonctionnement.",
-    createdAt: "2026-09-14T10:00:00.000Z",
+    id: crypto.randomUUID(),
+    authorName: "Alan Turing",
+    authorHandle: "alan_t",
+    content: "Je propose de considérer la question : « Les machines peuvent-elles penser ? » Cela devrait commencer par ce que j'appelle le jeu de l'imitation. C'est un jeu joué avec trois personnes, un homme (A), une femme (B) et un interrogateur (C) qui peut être de l'un ou l'autre sexe. L'interrogateur reste dans une pièce à part des deux autres. Le but du jeu pour l'interrogateur est de déterminer lequel des deux est l'homme et lequel est la femme.",
+    createdAt: new Date("1992-10-01T09:00:00Z")
   },
   {
-    id: "6",
-    authorName: "Emma Watson",
-    authorHandle: "emma_w",
-    content:
-      "Quelqu'un a une bonne ressource à recommander sur Tailwind CSS pour débutants ?",
-    createdAt: "2026-09-14T10:12:00.000Z",
+    id: crypto.randomUUID(),
+    authorName: "Margaret Hamilton",
+    authorHandle: "margaret_h",
+    content: "Le génie logiciel est tout aussi important que le matériel. Sans notre code, Apollo 11 n'aurait jamais pu atterrir sur la lune en toute sécurité. 🚀",
+    createdAt: new Date("1998-07-20T20:17:00Z")
   },
   {
-    id: "7",
-    authorName: "Geek Daily",
-    authorHandle: "geekdaily",
-    content:
-      "Découvrez notre sélection des 10 meilleurs raccourcis VS Code à maîtriser absolument.",
-    image: {
-      url: "https://picsum.photos/id/180/600/400",
-      alt: "Un ordinateur portable ouvert dans la nuit",
-    },
-    createdAt: "2026-09-14T10:30:00.000Z",
+    id: crypto.randomUUID(),
+    authorName: "Tim Berners-Lee",
+    authorHandle: "timberners_lee",
+    content: "Je viens de proposer un nouveau système de gestion de l'information. Je l'appelle le World Wide Web. Voyons si ça prend. 🕸️",
+    createdAt: new Date("2001-03-12T12:00:00Z")
   },
   {
-    id: "8",
-    authorName: "Alexandre",
-    authorHandle: "alex_dev",
-    content:
-      "Le composant TweetCard prend forme. Prochaine étape : la gestion du bouton de favori !",
-    createdAt: "2026-09-14T10:45:00.000Z",
+    id: crypto.randomUUID(),
+    authorName: "Linus Torvalds",
+    authorHandle: "linus_torvalds",
+    content: "Bonjour à tous, je crée un système d'exploitation libre (juste un hobby, ce ne sera pas grand et professionnel comme GNU) pour les clones 386(486) AT.",
+    createdAt: new Date("2005-08-25T20:57:08Z")
   },
   {
-    id: "9",
-    authorName: "Design System Hub",
-    authorHandle: "ds_hub",
-    content:
-      "Les variables CSS vs les Utility Classes : quel est votre choix pour un projet d'envergure ?",
-    createdAt: "2026-09-14T11:00:00.000Z",
+    id: crypto.randomUUID(),
+    authorName: "Guido van Rossum",
+    authorHandle: "gvanrossum",
+    content: "J'ai créé Python pour que ce soit un langage facile à lire et à écrire. N'oubliez pas, la lisibilité compte avant tout !",
+    createdAt: new Date("2010-02-20T10:00:00Z")
   },
   {
-    id: "10",
-    authorName: "Clara Bennett",
-    authorHandle: "clara_b",
-    content:
-      "Fin de la session de code pour aujourd'hui. Bon courage à tous pour vos projets !",
-    createdAt: "2026-09-14T11:15:00.000Z",
+    id: crypto.randomUUID(),
+    authorName: "Brendan Eich",
+    authorHandle: "brendaneich",
+    content: "J'ai écrit un langage de script pour Netscape Navigator en 10 jours. Je pense l'appeler JavaScript. Qu'est-ce qui pourrait mal tourner ?",
+    createdAt: new Date("2015-05-23T14:30:00Z")
   },
+  {
+    id: crypto.randomUUID(),
+    authorName: "Dennis Ritchie",
+    authorHandle: "dmr",
+    content: "UNIX est fondamentalement un système d'exploitation simple, mais il faut être un génie pour comprendre cette simplicité.",
+    createdAt: new Date("2019-10-15T09:00:00Z")
+  },
+  {
+    id: crypto.randomUUID(),
+    authorName: "Bjarne Stroustrup",
+    authorHandle: "stroustrup",
+    content: "Il n'y a que deux sortes de langages : ceux dont les gens se plaignent et ceux que personne n'utilise. C++ se porte très bien !",
+    createdAt: new Date("2024-10-14T11:00:00Z")
+  }
 ];

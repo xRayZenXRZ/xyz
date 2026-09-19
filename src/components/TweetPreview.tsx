@@ -5,8 +5,33 @@ type TweetPreviewProps = {
     tweet : Tweet 
 }
 
+const options : Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour : "numeric",
+    minute : "numeric"
+};
+
+const Avatar = ({authorName} : {authorName : string}) => {
+    const names = authorName.split(' ')
+    const firstName = names[0]?.[0] ?? ""
+    const lastName = names[1] === undefined ? "" : names[1][0]
+
+    return (
+        <div className="tweet-avatar">
+                <span className="tweet-avatar-initials">
+                    {firstName + lastName}
+                </span>
+        </div>
+    )
+}
+
+
 
 const ReadMore = ({ text } : {text : string} ) => {
+    // isExpanded est un état React : sa modification déclenche un nouveau rendu
+    // afin d'afficher ou de masquer le texte complet.
     const [isExpanded, setIsExpanded] = useState(false)
     const isLongText = text.length > 180
     const displayedText = isExpanded || !isLongText ? text : `${text.slice(0, 180)}...`
@@ -15,10 +40,7 @@ const ReadMore = ({ text } : {text : string} ) => {
         <>
             <span>{displayedText}</span>
             {isLongText && (
-                <button
-                    type="button"
-                    onClick={() => setIsExpanded((previous) => !previous)}
-                >
+                <button className="tweet-content-more-button" type="button" onClick={() => setIsExpanded((previous) => !previous)}>
                     {isExpanded ? "Voir moins" : "Voir plus"}
                 </button>
             )}
@@ -27,16 +49,21 @@ const ReadMore = ({ text } : {text : string} ) => {
 }
 
 export function TweetPreview({ tweet } : TweetPreviewProps) {
-
     return (
-        <div>
-            <p> authorname : {tweet.authorName}</p>
-            <p> authorHandle : @{tweet.authorHandle}</p>
-            <p> created at : {new Date(tweet.createdAt).toLocaleDateString()}</p>
-            <p>content : <ReadMore text={tweet.content} /></p>
+        <div className="tweet">
+            <Avatar authorName={tweet.authorName}/>
+            <span className="tweet-author">{tweet.authorName}</span>
+            <span className="tweet-authorhandle">@{tweet.authorHandle}</span>
+            <span className="tweet-created-at">{tweet.createdAt.toLocaleDateString("fr-FR",  options)}</span>
+            {/* image est optionnelle : la balise img n'est rendue que si elle existe. */}
             {tweet.image && (
-                <img src={tweet.image.url} alt={tweet.image.alt} className="tweet-image"/>
+                <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt}/>
             )}
+            <p className="tweet-content">
+                <ReadMore text={tweet.content}/>
+            </p>
+            <hr className="tweet-seperator"/>
+
         </div>
     )
 }
