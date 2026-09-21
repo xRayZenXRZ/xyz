@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Tweet } from "../types/Tweet";
+import { Link, useLocation } from "react-router-dom";
 
 type TweetPreviewProps = {
     tweet : Tweet 
@@ -49,6 +50,9 @@ const ReadMore = ({ text } : {text : string} ) => {
 }
 
 export function TweetPreview({ tweet } : TweetPreviewProps) {
+    const location = useLocation()
+    const isTweetPage = location.pathname === `/tweet/${tweet.id}`
+
     return (
         <div className="tweet">
             <Avatar authorName={tweet.authorName}/>
@@ -57,13 +61,17 @@ export function TweetPreview({ tweet } : TweetPreviewProps) {
             <span className="tweet-created-at">{tweet.createdAt.toLocaleDateString("fr-FR",  options)}</span>
             {/* image est optionnelle : la balise img n'est rendue que si elle existe. */}
             {tweet.image && (
-                <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt}/>
+                <Link to={`/tweet/${tweet.id}`}>
+                    <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt}/>
+                </Link>
             )}
             <p className="tweet-content">
                 <ReadMore text={tweet.content}/>
             </p>
+            {!tweet.image && !isTweetPage && (
+                <Link className="tweet-link" to={`/tweet/${tweet.id}`}>Voir la discussion</Link>
+            )}
             <hr className="tweet-seperator"/>
-
         </div>
     )
 }

@@ -1,10 +1,27 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router";
 import './index.css'
 import App from './App.tsx'
+import { TweetMasterPage } from "./pages/TweetsMasterPage.tsx";
+import { TweetDetailsPage } from "./pages/TweetDetailsPage.tsx";
+import { NotFoundPage } from "./pages/NotFoundPage.tsx";
+import { AboutPage } from "./pages/AboutPage.tsx";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const root  = document.getElementById("root");
+
+if (!root) {
+  throw new Error('Root element not found');
+}
+
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<TweetMasterPage/>}/>
+          <Route path="tweet/:id" element={<TweetDetailsPage />}/>
+          <Route path="about" element={<AboutPage/>}/>
+          <Route path="*" element={<NotFoundPage/>}/>
+        </Route>
+    </Routes>
+  </BrowserRouter>
+);

@@ -8,4 +8,5 @@ export type Tweet = {
   content: string;
   image?: TweetImage;
   createdAt: Date;
+  parentId?: string
 };

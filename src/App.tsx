@@ -1,20 +1,31 @@
 import './App.css'
 
 // add
-import { tweets } from './data/tweets.ts'
-import { TweetsList } from './components/TweetsList.tsx'
+import { Link, Outlet } from 'react-router-dom'
+
+function Header() {
+
+  return(
+    <div>
+      <h1 className="main-head-site-name">XYZ</h1>
+      <Link className="main-head-site-links-acceuil" to="/">Acceuil</Link>        
+      <Link className="main-head-site-links-a-propos" to="/about">À propos</Link>
+      <hr className="main-seperator"/>
+    </div>
+  )
+
+}
+
 
 function App() {
   
-  const initialTweets = tweets
-
   return (
     <>
-      <h1 className="main-head-site-name">XYZ</h1>
-      <hr className="main-seperator"/>
-      <h2 className="main-tweet-length">{initialTweets.length} tweets</h2>
-      {/* App transmet la liste des tweets à TweetsList, qui l'affichera. */}
-      {TweetsList({tweets : initialTweets})}
+      <Header/>
+      <main>
+        {/* App transmet la liste des tweets à TweetsList, qui l'affichera. */}
+        <Outlet/>
+      </main>
     </>
   )
 }
