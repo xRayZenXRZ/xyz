@@ -1,17 +1,17 @@
 :root {
-  --white : #ffffff; 
-  --light-blue : #6ec7ea;
-  --blue-grey : #51b1ce;
-  --light-grey : #e6e6e6;
-  --pink : #ff4370;
-  --magenta : #e52e62;
-  --black : #000000;
-  --light-grey-2 : #cccccc; 
-  --light-grey-3 : #e0e0e0; 
-  --light-grey-4 : #cccccc; 
+  --white: #ffffff;
+  --light-blue: #6ec7ea;
+  --blue-grey: #51b1ce;
+  --light-grey: #e6e6e6;
+  --pink: #ff4370;
+  --magenta: #e52e62;
+  --black: #000000;
+  --light-grey-2: #cccccc;
+  --light-grey-3: #e0e0e0;
+  --light-grey-4: #cccccc;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -23,9 +23,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
 
 #root {
   width: min(100%, 670px);
@@ -37,12 +35,10 @@
   box-sizing: border-box;
 }
 
-
 body {
   margin: 0;
   background-color: var(--light-grey);
 }
-
 
 h1,
 h2 {

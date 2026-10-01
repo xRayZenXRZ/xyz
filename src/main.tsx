@@ -9,16 +9,18 @@ import { AboutPage } from "./pages/AboutPage.tsx";
 const root = document.getElementById("root");
 
 if (!root) {
-    throw new Error("Root element not found");
+  throw new Error("Root element not found");
 }
 
-ReactDOM.createRoot(root).render(<BrowserRouter>
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<TweetMasterPage />}/>
-        <Route path="tweet/:id" element={<TweetDetailsPage />}/>
-        <Route path="about" element={<AboutPage />}/>
-        <Route path="*" element={<NotFoundPage />}/>
+        <Route index element={<TweetMasterPage />} />
+        <Route path="tweet/:id" element={<TweetDetailsPage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
-  </BrowserRouter>);
+  </BrowserRouter>,
+);
