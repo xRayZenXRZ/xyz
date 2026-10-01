@@ -1,12 +1,12 @@
 import type { TweetImage } from "./TweetImage";
-
-
 export type Tweet = {
-  id: string;
-  authorName: string;
-  authorHandle: string;
-  content: string;
-  image?: TweetImage;
-  createdAt: Date;
-  parentId?: string
+    id: string;
+    authorName: string;
+    authorHandle: string;
+    content: string;
+    image?: TweetImage;
+    createdAt: string;
+    parentId?: string;
+    likes: number;
+    likedByMe: boolean;
 };

@@ -1,8 +1,20 @@
 import type { Tweet } from "../types/Tweet";
 
-export const tweets: Tweet[] = [
+// Déclaration des constantes ID pour chaque compte
+export const ID_ADA_LOVELACE = "a1b2c3d4-1234-5678-9abc-def012345678";
+export const ID_GRACE_HOPPER = "b2c3d4e5-2345-6789-abcd-ef0123456789";
+export const ID_ALAN_TURING = "c3d4e5f6-3456-7890-bcde-f0123456789a";
+export const ID_MARGARET_HAMILTON = "d4e5f6a7-4567-8901-cdef-0123456789ab";
+export const ID_TIM_BERNERS_LEE = "e5f6a7b8-5678-9012-def0-123456789abc";
+export const ID_LINUS_TORVALDS = "f6a7b8c9-6789-0123-ef01-23456789abcd";
+export const ID_GUIDO_VAN_ROSSUM = "a7b8c9d0-7890-1234-f012-3456789abcde";
+export const ID_BRENDAN_EICH = "b8c9d0e1-8901-2345-0123-456789abcdef";
+export const ID_DENNIS_RITCHIE = "c9d0e1f2-9012-3456-1234-56789abcdef0";
+export const ID_BJARNE_STROUSTRUP = "d0e1f2a3-0123-4567-2345-6789abcdef01";
+
+export const initialTweets: Tweet[] = [
   {
-    id: crypto.randomUUID(),
+    id: ID_ADA_LOVELACE,
     authorName: "Ada Lovelace",
     authorHandle: "ada_lovelace",
     content: "Je viens de terminer le premier algorithme destiné à être exécuté par une machine. La machine analytique a un potentiel incroyable ! #programmation #histoire",
@@ -10,73 +22,93 @@ export const tweets: Tweet[] = [
       url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/500px-Ada_Lovelace_portrait.jpg",
       alt: "Portrait d'Ada Lovelace"
     },
-    createdAt: new Date("1982-10-10T10:00:00Z")
+    createdAt: "1982-10-10T10:00:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_GRACE_HOPPER,
     authorName: "Grace Hopper",
     authorHandle: "grace_hopper",
-    content: "Nous avons trouvé un vrai 'bug' dans le système aujourd'hui. Une phalène s'était coincée dans le relais 70 du panneau F. Nous avons dû débugger la machine ! 🐛",
+    content: "Nous avons trouvé un vrai 'bug' dans le système aujourd'hui. Une phalène s'était coincée dans le relais 70 du panneau F. Nous avons dû débugger la machine ! ",
     image: {
       url: "https://upload.wikimedia.org/wikipedia/commons/5/55/Grace_Hopper.jpg",
       alt: "Portrait de Grace Hopper"
     },
-    createdAt: new Date("1986-09-09T15:45:00Z")
+    createdAt: "1986-09-09T15:45:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_ALAN_TURING,
     authorName: "Alan Turing",
     authorHandle: "alan_t",
     content: "Je propose de considérer la question : « Les machines peuvent-elles penser ? » Cela devrait commencer par ce que j'appelle le jeu de l'imitation. C'est un jeu joué avec trois personnes, un homme (A), une femme (B) et un interrogateur (C) qui peut être de l'un ou l'autre sexe. L'interrogateur reste dans une pièce à part des deux autres. Le but du jeu pour l'interrogateur est de déterminer lequel des deux est l'homme et lequel est la femme.",
-    createdAt: new Date("1992-10-01T09:00:00Z")
+    createdAt: "1992-10-01T09:00:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_MARGARET_HAMILTON,
     authorName: "Margaret Hamilton",
     authorHandle: "margaret_h",
-    content: "Le génie logiciel est tout aussi important que le matériel. Sans notre code, Apollo 11 n'aurait jamais pu atterrir sur la lune en toute sécurité. 🚀",
-    createdAt: new Date("1998-07-20T20:17:00Z")
+    content: "Le génie logiciel est tout aussi important que le matériel. Sans notre code, Apollo 11 n'aurait jamais pu atterrir sur la lune en toute sécurité.",
+    createdAt: "1998-07-20T20:17:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_TIM_BERNERS_LEE,
     authorName: "Tim Berners-Lee",
     authorHandle: "timberners_lee",
-    content: "Je viens de proposer un nouveau système de gestion de l'information. Je l'appelle le World Wide Web. Voyons si ça prend. 🕸️",
-    createdAt: new Date("2001-03-12T12:00:00Z")
+    content: "Je viens de proposer un nouveau système de gestion de l'information. Je l'appelle le World Wide Web. Voyons si ça prend. ",
+    createdAt: "2001-03-12T12:00:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_LINUS_TORVALDS,
     authorName: "Linus Torvalds",
     authorHandle: "linus_torvalds",
     content: "Bonjour à tous, je crée un système d'exploitation libre (juste un hobby, ce ne sera pas grand et professionnel comme GNU) pour les clones 386(486) AT.",
-    createdAt: new Date("2005-08-25T20:57:08Z")
+    createdAt: "2005-08-25T20:57:08Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_GUIDO_VAN_ROSSUM,
     authorName: "Guido van Rossum",
     authorHandle: "gvanrossum",
     content: "J'ai créé Python pour que ce soit un langage facile à lire et à écrire. N'oubliez pas, la lisibilité compte avant tout !",
-    createdAt: new Date("2010-02-20T10:00:00Z")
+    createdAt: "2010-02-20T10:00:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_BRENDAN_EICH,
     authorName: "Brendan Eich",
     authorHandle: "brendaneich",
     content: "J'ai écrit un langage de script pour Netscape Navigator en 10 jours. Je pense l'appeler JavaScript. Qu'est-ce qui pourrait mal tourner ?",
-    createdAt: new Date("2015-05-23T14:30:00Z")
+    createdAt: "2015-05-23T14:30:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_DENNIS_RITCHIE,
     authorName: "Dennis Ritchie",
     authorHandle: "dmr",
     content: "UNIX est fondamentalement un système d'exploitation simple, mais il faut être un génie pour comprendre cette simplicité.",
-    createdAt: new Date("2019-10-15T09:00:00Z")
+    createdAt: "2019-10-15T09:00:00Z",
+    likedByMe: false,
+    likes: 0
   },
   {
-    id: crypto.randomUUID(),
+    id: ID_BJARNE_STROUSTRUP,
     authorName: "Bjarne Stroustrup",
     authorHandle: "stroustrup",
     content: "Il n'y a que deux sortes de langages : ceux dont les gens se plaignent et ceux que personne n'utilise. C++ se porte très bien !",
-    createdAt: new Date("2024-10-14T11:00:00Z")
+    createdAt: "2024-10-14T11:00:00Z",
+    likedByMe: false,
+    likes: 0
   }
 ];

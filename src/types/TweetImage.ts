@@ -1,4 +1,4 @@
 export type TweetImage = {
-  url: string;
-  alt: string;
+    url: string;
+    alt: string;
 };
