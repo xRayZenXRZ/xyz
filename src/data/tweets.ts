@@ -1,16 +1,16 @@
 import type { Tweet } from "../types/Tweet";
 
 // Déclaration des constantes ID pour chaque compte
-export const ID_ADA_LOVELACE = "a1b2c3d4-1234-5678-9abc-def012345678";
-export const ID_GRACE_HOPPER = "b2c3d4e5-2345-6789-abcd-ef0123456789";
-export const ID_ALAN_TURING = "c3d4e5f6-3456-7890-bcde-f0123456789a";
-export const ID_MARGARET_HAMILTON = "d4e5f6a7-4567-8901-cdef-0123456789ab";
-export const ID_TIM_BERNERS_LEE = "e5f6a7b8-5678-9012-def0-123456789abc";
-export const ID_LINUS_TORVALDS = "f6a7b8c9-6789-0123-ef01-23456789abcd";
-export const ID_GUIDO_VAN_ROSSUM = "a7b8c9d0-7890-1234-f012-3456789abcde";
-export const ID_BRENDAN_EICH = "b8c9d0e1-8901-2345-0123-456789abcdef";
-export const ID_DENNIS_RITCHIE = "c9d0e1f2-9012-3456-1234-56789abcdef0";
-export const ID_BJARNE_STROUSTRUP = "d0e1f2a3-0123-4567-2345-6789abcdef01";
+export const ID_ADA_LOVELACE = crypto.randomUUID();
+export const ID_GRACE_HOPPER = crypto.randomUUID();
+export const ID_ALAN_TURING = crypto.randomUUID();
+export const ID_MARGARET_HAMILTON = crypto.randomUUID();
+export const ID_TIM_BERNERS_LEE = crypto.randomUUID();
+export const ID_LINUS_TORVALDS = crypto.randomUUID();
+export const ID_GUIDO_VAN_ROSSUM = crypto.randomUUID();
+export const ID_BRENDAN_EICH = crypto.randomUUID();
+export const ID_DENNIS_RITCHIE = crypto.randomUUID();
+export const ID_BJARNE_STROUSTRUP = crypto.randomUUID();
 
 export const initialTweets: Tweet[] = [
   {

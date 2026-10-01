@@ -57,7 +57,7 @@ export const TweetPreview = ({
           <span className="tweet-authorhandle">@{tweet.authorHandle}</span>
           <time
             className="tweet-created-at"
-            dateTime={new Date(tweet.createdAt).toISOString()}
+            dateTime={tweet.createdAt}
           >
             {new Date(tweet.createdAt).toLocaleString("fr-FR", options)}
           </time>

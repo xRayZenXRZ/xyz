@@ -37,7 +37,21 @@ export default function App(): ReactElement {
       ),
     );
   };
-  const context: TweetsContextValue = { tweets, addTweet, toggleLike };
+  const addReply = (parentId : string, content : string, image? : TweetImage) : void => {
+    const replyTweet : Tweet = {
+      id: crypto.randomUUID(),
+      authorName: "Vous",
+      authorHandle: "vous",
+      content,
+      ...(image ? { image } : {}),
+      createdAt: new Date().toISOString(),
+      likes: 0,
+      likedByMe: false,
+      parentId
+    };
+    setTweets((previousTweet) => [replyTweet, ...previousTweet])
+  }
+  const context: TweetsContextValue = { tweets, addTweet, toggleLike, addReply};
   return (
     <TweetsContext.Provider value={context}>
       <header className="main-head">

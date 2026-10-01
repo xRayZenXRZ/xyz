@@ -5,6 +5,7 @@ export type TweetsContextValue = {
   tweets: Array<Tweet>;
   addTweet: (content: string, image?: TweetImage) => void;
   toggleLike: (id: string) => void;
+  addReply(parentId : string, content : string, image? : TweetImage) : void ;
 };
 export const TweetsContext = createContext<TweetsContextValue | undefined>(
   undefined,

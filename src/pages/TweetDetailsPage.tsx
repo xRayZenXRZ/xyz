@@ -3,13 +3,15 @@ import { Link, useParams } from "react-router-dom";
 import { TweetPreview } from "../components/TweetPreview";
 import { useTweetsContext } from "../contexts/TweetsContext";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import { TweetForm } from "../components/TweetForm";
 export const TweetDetailsPage = (): ReactElement => {
   const { id } = useParams<{
     id: string;
   }>();
-  const { tweets, toggleLike } = useTweetsContext();
+  const { tweets, toggleLike, addReply } = useTweetsContext();
   const tweet = tweets.find((tweet) => tweet.id === id);
   const reponses = tweets.filter((tweet) => tweet.parentId === id);
+
   useDocumentTitle(
     tweet ? `Tweet de ${tweet.authorName}` : "Tweet introuvable",
   );
@@ -39,6 +41,12 @@ export const TweetDetailsPage = (): ReactElement => {
           />
         ))
       )}
+      <TweetForm
+        label={`Répondre à ${tweet.authorName}`}
+        onSubmit={(content, attachment) =>
+          addReply(tweet.id, content, attachment)
+        }
+      />
     </>
   );
 };

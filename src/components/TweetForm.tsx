@@ -2,9 +2,10 @@ import { type ReactElement, useState, type SubmitEvent } from "react";
 import type { TweetImage } from "../types/TweetImage";
 type TweetFormProps = {
   onSubmit: (content: string, image?: TweetImage) => void;
+  label? : string;
 };
 const CONTENT_MAX_LENGTH = 280;
-export const TweetForm = ({ onSubmit }: TweetFormProps): ReactElement => {
+export const TweetForm = ({ onSubmit, label = "Quoi de neuf ?" }: TweetFormProps): ReactElement => {
   const [content, setContent] = useState<string>("");
   const [hasEditedContent, setHasEditedContent] = useState(false);
   const [includeImage, setIncludeImage] = useState(false);
@@ -46,7 +47,7 @@ export const TweetForm = ({ onSubmit }: TweetFormProps): ReactElement => {
       <textarea
         className="tweet-form"
         id="tweet-content"
-        placeholder="Quoi de neuf ?"
+        placeholder={label}
         value={content}
         onChange={(event) => {
           setContent(event.target.value);
