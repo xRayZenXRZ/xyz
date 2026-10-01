@@ -7,9 +7,11 @@ import { TweetDetailsPage } from "./pages/TweetDetailsPage.tsx";
 import { NotFoundPage } from "./pages/NotFoundPage.tsx";
 import { AboutPage } from "./pages/AboutPage.tsx";
 const root = document.getElementById("root");
+
 if (!root) {
     throw new Error("Root element not found");
 }
+
 ReactDOM.createRoot(root).render(<BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>

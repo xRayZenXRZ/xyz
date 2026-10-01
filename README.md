@@ -12,64 +12,64 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Élements réalisés
 
-- **à compléter**
+- **Complet**
 
 ### TD 01 - Bonus réalisés
 
-- **à compléter**
+- **Complet**
 
 ### TD 01 - Élements non réalisés
 
-- **à compléter**
+- **Aucun**
 
 ### TD 01 - Difficultés rencontrées + Solutions appliquées
 
-- **à compléter**
+- **/**
 
 ### TD 01 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+- **/**
 
 ## TD 02
 
 ### TD 02 - Élements réalisés
 
-- **à compléter**
+- **Complet**
 
 ### TD 02 - Bonus réalisés
 
-- **à compléter**
+- **Complet**
 
 ### TD 02 - Élements non réalisés
 
-- **à compléter**
+- **Aucun**
 
 ### TD 02 - Difficultés rencontrées + Solutions appliquées
 
-- **à compléter**
+- **/**
 
 ### TD 02 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+- **/**
 
 ## TD 03
 
 ### TD 03 - Élements réalisés
 
-- **à compléter**
+- **Complet**
 
 ### TD 03 - Bonus réalisés
 
-- **à compléter**
+- **Complet**
 
 ### TD 03 - Élements non réalisés
 
-- **à compléter**
+- **Aucun**
 
 ### TD 03 - Difficultés rencontrées + Solutions appliquées
 
-- **à compléter**
+- **/**
 
 ### TD 03 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+- **/**
