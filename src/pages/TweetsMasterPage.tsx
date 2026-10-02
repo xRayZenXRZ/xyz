@@ -55,21 +55,20 @@ export const TweetsMasterPage = (): ReactElement => {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
       />
-      <label className="filter-label" htmlFor="sort-order">Trier par</label>
-      <select
-        className="sort-order"
-        id="sort-order"
-        value={order}
-        onChange={(event) => setOrder(event.target.value as sortOrder)}
-      >
-        <option value="recent">du plus récent au plus ancien</option>
-        <option value="oldest">du plus ancien au plus récent</option>
-        <option value="likes">des plus aimés aux moins aimés</option>
-      </select>
-      <p className="feed-summary">résultats : {display.length}</p>
-      <p className="feed-summary">
-        Total du fil : {totalLikes} mentions J'aime
-      </p>
+      <label className="sort-order-label" htmlFor="sort-order">Trier par</label>
+      <div className="feed-toolbar">
+        <p className="feed-summary">{display.length} tweets・{totalLikes} mentions J'aime</p>
+        <select
+          className="sort-order"
+          id="sort-order"
+          value={order}
+          onChange={(event) => setOrder(event.target.value as sortOrder)}
+        >
+          <option value="recent">du plus récent au plus ancien</option>
+          <option value="oldest">du plus ancien au plus récent</option>
+          <option value="likes">des plus aimés aux moins aimés</option>
+        </select>
+      </div>
       {display.length === 0 ? (
         <p>Aucun tweet ne correspond</p>
       ) : (
