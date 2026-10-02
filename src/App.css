@@ -152,6 +152,11 @@
   padding: 8px;
 }
 
+.sort-order {
+  height: 15;
+  border: transparent;
+}
+
 .author-search {
   height : 38px;
   width: 275px;

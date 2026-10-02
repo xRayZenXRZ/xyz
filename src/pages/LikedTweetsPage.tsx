@@ -1,8 +1,8 @@
 import type { ReactElement } from "react";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { useTweetsContext } from "../contexts/TweetsContext";
-import { TweetPreview } from "../components/TweetPreview";
 import { Link } from "react-router-dom";
+import { TweetsList } from "../components/TweetsList";
 
 export const LikedTweetsPage = (): ReactElement => {
 
@@ -23,9 +23,7 @@ export const LikedTweetsPage = (): ReactElement => {
   return (
     <>
       <h1>Liked Tweets Page</h1>
-      {likedTweets.map((tweet) => (
-        <TweetPreview key={tweet.id} onToggleLike={toggleLike} tweet={tweet} />
-      ))}
+      <TweetsList onToggleLike={toggleLike} tweets={likedTweets}/>
     </>
   );
 };

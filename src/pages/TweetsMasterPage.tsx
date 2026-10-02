@@ -25,7 +25,7 @@ export const TweetsMasterPage = (): ReactElement => {
       tweet.content.toLocaleLowerCase("fr-FR").includes(normalizedQuery),
   );
 
-  const totalLikes = rootTweets.reduce(
+  const totalLikes = filteredTweets.reduce(
     (total, tweet) => total + tweet.likes,
     0,
   );
@@ -55,8 +55,9 @@ export const TweetsMasterPage = (): ReactElement => {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
       />
-      <label htmlFor="sort-order">Trier par</label>
+      <label className="filter-label" htmlFor="sort-order">Trier par</label>
       <select
+        className="sort-order"
         id="sort-order"
         value={order}
         onChange={(event) => setOrder(event.target.value as sortOrder)}
