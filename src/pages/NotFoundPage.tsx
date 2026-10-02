@@ -7,7 +7,7 @@ export const NotFoundPage = (): ReactElement => {
     <>
       <h1>Page introuvable</h1>
 
-      <Link to="/">Retour aux tweets</Link>
+      <Link to="/">Acceuil</Link>
     </>
   );
 };

@@ -287,3 +287,7 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+.route{
+  margin-bottom: 25px;
+}

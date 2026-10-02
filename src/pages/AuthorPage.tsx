@@ -25,9 +25,7 @@ export const AuthorPage = (): ReactElement => {
   }
     return (
     <>
-    <span>
-        <Link to="/">Accueil</Link> / {`Author @${tweetAuthor}`}
-    </span>
+    <h1>Author @{tweetAuthor}</h1>
 
     <TweetsList onToggleLike={toggleLike} tweets={tweet} />
     </>

@@ -7,7 +7,7 @@ export const AboutPage = (): ReactElement => {
     <>
       <h1>About Page</h1>
 
-      <Link to="/">Retour aux tweets</Link>
+      <Link to="/">Accueil</Link>
     </>
   );
 };

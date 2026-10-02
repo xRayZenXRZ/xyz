@@ -18,14 +18,14 @@ export const TweetDetailsPage = (): ReactElement => {
   if (tweet === undefined) {
     return (
       <>
-        <p>Ce tweet n'existe pas</p>
+        <h1>Ce tweet n'existe pas</h1>
         <Link to="/">Accueil</Link>
       </>
     );
   }
   return (
     <>
-      <span>
+      <span className="route">
         <Link to="/">Accueil</Link> / {`tweet de ${tweet.authorName}`}
       </span>
 

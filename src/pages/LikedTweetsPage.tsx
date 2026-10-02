@@ -14,7 +14,7 @@ export const LikedTweetsPage = (): ReactElement => {
   if(likedTweets.length === 0){
     return(
         <>
-        <p>Vous n'avez pas de liked Tweet pour l'instant</p>
+        <h1>Vous n'avez pas de liked Tweet pour l'instant</h1>
         <Link to="/">Accueil</Link>
       </>
     )
