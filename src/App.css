@@ -152,6 +152,12 @@
   padding: 8px;
 }
 
+.author-search {
+  height : 38px;
+  width: 275px;
+  padding : 5px;
+}
+
 .feed-summary {
   margin: 16px 0 18px;
 }
@@ -193,12 +199,13 @@
   gap: 0 8px;
   min-height: 32px;
 }
-
+.tweet-author-link,
 .tweet-author {
   font-size: 18px;
   font-weight: 700;
+  text-decoration: none;
+  color: var(--black);
 }
-
 .tweet-authorhandle,
 .tweet-created-at {
   font-size: 14px;

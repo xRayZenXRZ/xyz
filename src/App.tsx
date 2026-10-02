@@ -11,6 +11,10 @@ import {
 
 export default function App(): ReactElement {
   const [tweets, setTweets] = useState<Array<Tweet>>(initialTweets);
+  //ajout le 2/10
+
+
+
   const addTweet = (content: string, image?: TweetImage): void => {
     const newTweet: Tweet = {
       id: crypto.randomUUID(),
@@ -56,7 +60,7 @@ export default function App(): ReactElement {
     <TweetsContext.Provider value={context}>
       <header className="main-head">
         <div className="main-head-site-brand">
-          <img className="main-head-site-logo" src="/xyz.png" alt="Logo XYZ" />
+          <Link to={"/"}><img className="main-head-site-logo" src="/xyz.png" alt="Logo XYZ" /></Link>
           <h1 className="main-head-site-name">XYZ</h1>
         </div>
         <nav
@@ -65,6 +69,7 @@ export default function App(): ReactElement {
         >
           <Link to="/">Accueil</Link>
           <Link to="/about">À propos</Link>
+          <Link to="/likes">vos likes</Link>
         </nav>
       </header>
       <Outlet />

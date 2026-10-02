@@ -50,10 +50,12 @@ export const TweetPreview = ({
   const isTweetPage = location.pathname === `/tweet/${tweet.id}`;
   return (
     <div className="tweet">
-      <Avatar authorName={tweet.authorName} />
+      <Link to={`/authors/${tweet.authorHandle}`}><Avatar authorName={tweet.authorName} /></Link>
       <div className="tweet-body">
         <div className="tweet-meta">
+        <Link className="tweet-author-link" to={`/authors/${tweet.authorHandle}`}>
           <span className="tweet-author">{tweet.authorName}</span>
+        </Link>
           <span className="tweet-authorhandle">@{tweet.authorHandle}</span>
           <time
             className="tweet-created-at"
